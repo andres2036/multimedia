@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos - Soymich</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #black;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            margin: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        .carrusel {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .imagenes {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .imagenes img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .boton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .boton.izquierda {
+            left: 10px;
+        }
+
+        .boton.derecha {
+            right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .redes-sociales {
+            margin-top: 20px;
+        }
+
+        .redes-sociales a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .redes-sociales a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galería de Fotos - Comunicadora Social</h1>
+    </header>
+
+    <main>
+        <h2>Imágenes de Nuestro Trabajo</h2>
+        <div class="carrusel">
+            <div class="imagenes" id="imagenes">
+                
+                <img src="img2/ascum.png" alt="Imagen 2">
+                
+            </div>
+            <button class="boton izquierda" onclick="cambiarImagen(-1)">&#10094;</button>
+            <button class="boton derecha" onclick="cambiarImagen(1)">&#10095;</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Soymich. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/tuPerfil" target="_blank" title="Facebook"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/tuPerfil" target="_blank" title="Twitter"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/tuPerfil" target="_blank" title="Instagram"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://www.linkedin.com/in/

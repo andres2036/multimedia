@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        form {
+            width: 50%;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <ul>
+            <li><a href="https://www.facebook.com/tufacebook" target="_blank">Facebook</a></li>
+            <li><a href="https://www.twitter.com/tutwitter" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com/tuinstagram" target="_blank">Instagram</a></li>
+        </ul>
+    </header>
+    <main>
+        <h2>Envíame un mensaje</h2>
+        <form id="formulario-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </main>
+    <script>
+        const formulario = document.getElementById('formulario-contacto');
+
+        formulario.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const mensaje = document.getElementById('mensaje').value;
+            // Aquí puedes agregar la lógica para enviar el mensaje
+            console.log(`Nombre: ${nombre}, Correo: ${correo}, Mensaje: ${mensaje}`);
+            alert('Mensaje enviado con éxito.');
+            formulario.reset(); // Limpia el formulario después de enviar
+        });
+
+        
+
+
+    </script>
+</body>
+</html>
